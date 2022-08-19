@@ -100,22 +100,22 @@ kubectl port-forward svc/prometheus-grafana 9000:80 --namespace=prometheus-opera
 * Go to your browser and type 
  **127.0.0.1:9000**
 
-* for username and password type these commands on your terminal
+* For username and password type these commands on your terminal
  ```
  kubectl get secrets -n prometheus-operator
  ```
  ```
  kubectl get secrets prometheus-grafana --namespace=prometheus-operator -o yaml
  ```
- * now decode the username and password using command
+ * Now decode the username and password using command
  ```
  echo cHJvbS1vcGVyYXRvcg== | base64 --decode
  ```
- * open your dashboard of grafana 
-  1. settings
+ * Open your dashboard of grafana 
+  1. Settings
   2. Click on "Data Sources
   3. Click on "Add data source"
-  4. name : prometheus
+  4. Name : prometheus
   5. URL : Set the appropriate Prometheus server URL (ex : http://prometheus-operated.default.svc.cluster.local:9090 )
   6. Adjust other data source settings as desired (for example, choosing the right Access method).
      Click "Save & Test" to save the new data source. 
