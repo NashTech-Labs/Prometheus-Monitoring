@@ -12,7 +12,6 @@ This command configures kubectl to use the cluster you created.
 
 ```
 link: https://raw.githubusercontent.com/GoogleCloudPlatform/prometheus-engine/v0.4.3-gke.0/examples/example-app.yaml
-
 ```
 3. Apply menifest file for deployment.
 
@@ -60,7 +59,6 @@ http://localhost:5000/metrics
 
 ```
 kubectl apply -f applicationservice.yaml
-
 ```
 
 7. Create cluster role, role binding, and service account 
@@ -73,21 +71,18 @@ Check if the role is created and bound to the ServiceAccount
 
 ```
 kubectl describe clusterrolebinding prometheus
-
 ```
 
 8. Create service monitor resource/pod monitor resource
 
 ```
 kubectl apply -f service-monitor.yaml
-
 ```
 
 9. Create a file prometheus.yaml 
 
 ```
 kubectl apply -f prometheus.yaml
-
 ```
 
 ## Grafana Dashboard
@@ -95,8 +90,8 @@ kubectl apply -f prometheus.yaml
 
 ```
 kubectl port-forward svc/prometheus-grafana 9000:80 --namespace=prometheus-operator
-
 ```
+
 * Go to your browser and type 
  **127.0.0.1:9000**
 
