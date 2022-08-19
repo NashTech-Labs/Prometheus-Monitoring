@@ -18,7 +18,7 @@ link: https://raw.githubusercontent.com/GoogleCloudPlatform/prometheus-engine/v0
 
 **Command**
 ```
-kubectl apply -f apps.yaml
+kubectl apply -f app.yaml
 ```
  Check the deployment using command: 
 ```
