@@ -1,24 +1,24 @@
 kind: Deployment
 metadata:
-  name: prom-example
+  name: devops1-example
   labels:
-    app: prom-example
+    app: devops1-example
 spec:
   selector:
     matchLabels:
-      app: prom-example
+      app: devops1-example
   replicas: 3
   template:
     metadata:
       labels:
-        app: prom-example
+        app: devops1-example
     spec:
       nodeSelector:
         kubernetes.io/os: linux
         kubernetes.io/arch: amd64
       containers:
       - image: nilebox/prometheus-example-app@sha256:dab60d038c5d6915af5bcbe5f0279a22b95a8c8be254153e22d7cd81b21b84c5
-        name: prom-example
+        name: devops1-example
         ports:
         - name: metrics
           containerPort: 1234
